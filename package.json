@@ -1,0 +1,40 @@
+{
+  "name": "auth2-project",
+  "version": "1.0.0",
+  "description": "Authenication using JSON Web Tokens",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianbparra/node-auth2-project.git"
+  },
+  "keywords": [
+    "express",
+    "sqlite3",
+    "JSON",
+    "Web",
+    "Tokens",
+    "JWT",
+    "knex"
+  ],
+  "author": "Adrian Parra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianbparra/node-auth2-project/issues"
+  },
+  "homepage": "https://github.com/adrianbparra/node-auth2-project#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.0",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
