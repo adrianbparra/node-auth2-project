@@ -17,12 +17,24 @@ server.post("/register", (req,res) =>{
 
     user.password = hash
 
-
-    dbAccounts.add(user)
-        .then(account => {
-            res.status(201).json(account)
+    dbAccounts.findBy({username: user.username}).first()
+        .then(usr =>{
+            
+            if (!usr){
+                
+                dbAccounts.add(user)
+                    .then(account => {
+                        res.status(201).json(account)
+                })
+                .catch(err => res.status(500).json({errorMessage: "Server Erorr", err}))
+            
+            } else {
+                res.status(401).json({message: "Username is already taken"})
+            }
         })
-        .catch(err => res.status(500).json({errorMessage: "Server Erorr", err}))
+
+
+    
 
 })
 

@@ -2,7 +2,7 @@
 
 module.exports = (req,res,next) =>{
 
-    console.log(req.decodedToken.department)
+    // console.log(req.decodedToken.department)
     
     if(req.decodedToken.department){
         next()
